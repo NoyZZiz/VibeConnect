@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Experiences | VibeConnect</title>
+    <meta name="description" content="Browse all Japanese and Korean cultural experiences across India">
+    
+    <!-- Preload Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar">
+        <!-- ... same navbar code ... -->
+    </nav>
+
+    <!-- Experiences Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>All Experiences</h1>
+            <p>Browse our complete collection of Japanese and Korean cultural experiences across India</p>
+        </div>
+    </section>
+
+    <!-- Experience Filters -->
+    <section class="experience-filters">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="exp-city-filter">City:</label>
+                    <select id="exp-city-filter">
+                        <option value="all">All Cities</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="pune">Pune</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="exp-category-filter">Category:</label>
+                    <select id="exp-category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="anime">Anime & Manga</option>
+                        <option value="kpop">K-Pop</option>
+                        <option value="tea-ceremony">Tea Ceremony</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="food">Food Experience</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="exp-price-filter">Price Range:</label>
+                    <select id="exp-price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-500">Under ₹500</option>
+                        <option value="500-1000">₹500 - ₹1,000</option>
+                        <option value="1000-1500">₹1,000 - ₹1,500</option>
+                        <option value="1500+">Over ₹1,500</option>
+                    </select>
+                </div>
+                
+                <button class="filter-reset" id="reset-filters">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Experiences Grid -->
+    <section class="all-experiences">
+        <div class="container">
+            <div class="experience-grid" id="experience-container">
+                <!-- Experience 1 - With Ethical Review Count -->
+                <div class="experience-card" data-city="delhi" data-category="tea-ceremony" data-price="1200">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/japan-house-delhi.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                        <span class="group-tag">Group Experience</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="review-count">(<span data-review-api="japan-house-delhi">142</span>)</span>
+                        </div>
+                        <h3>Japanese Tea Ceremony Experience</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Japan House, Delhi</p>
+                        <p class="exp-desc">Authentic Japanese tea ceremony conducted by trained tea masters from Kyoto.</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 2 hours</span>
+                            <span><i class="fas fa-users"></i> 8 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=japan-house-delhi" class="book-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="experience-card" data-city="mumbai" data-category="kpop" data-price="800">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/kpop-dance-mumbai.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                        <span class="group-tag">Group Experience</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.4</span>
+                            <span class="review-count">(<span data-review-api="kpop-dance-mumbai">89</span>)</span>
+                        </div>
+                        <h3>K-Pop Random Play Dance</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Danceworx Studio, Mumbai</p>
+                        <p class="exp-desc">Dance to random K-pop songs with other fans. All levels welcome!</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                            <span><i class="fas fa-users"></i> 25 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=kpop-dance-mumbai" class="book-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- More experiences... -->
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Experiences</h2>
+                <p>Subscribe to our newsletter for the latest events and special offers</p>
+                
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- ... same footer code as index.html ... -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/experiences.js"></script>
+    <script src="js/review-api.js"></script> <!-- New review loading script -->
+</body>
+</html>

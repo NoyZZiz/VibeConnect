@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeConnect | Japanese & Korean Cultural Experiences in India</title>
+    <meta name="description" content="Book authentic anime, K-pop, tea ceremonies and Japanese cultural experiences across India">
+    
+    <!-- Preload Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="VibeConnect Logo" width="40">
+                <span>VibeConnect</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="#cities">Cities</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="host.html" class="host-btn">Become a Host</a></li>
+                <li><a href="#login" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover Japanese & Korean Culture in India</h1>
+                <p>Join authentic anime, K-pop, tea ceremonies and cultural experiences with fellow enthusiasts</p>
+                
+                <div class="search-box">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search experiences...">
+                    </div>
+                    <div class="search-filter">
+                        <select id="city-filter">
+                            <option value="">All Cities</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="pune">Pune</option>
+                        </select>
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="anime">Anime</option>
+                            <option value="kpop">K-Pop</option>
+                            <option value="tea-ceremony">Tea Ceremony</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="food">Food</option>
+                        </select>
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="experiences.html" class="btn primary-btn">Explore Experiences</a>
+                    <a href="#featured" class="btn secondary-btn">Featured Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Popular Categories</h2>
+            <p>Find experiences that match your interests</p>
+            
+            <div class="category-grid">
+                <a href="experiences.html?category=anime" class="category-card">
+                    <div class="category-icon anime">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Anime & Manga</h3>
+                    <p>Dining, workshops, screenings</p>
+                </a>
+                
+                <a href="experiences.html?category=kpop" class="category-card">
+                    <div class="category-icon kpop">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>K-Pop</h3>
+                    <p>Dance, karaoke, fan meets</p>
+                </a>
+                
+                <a href="experiences.html?category=tea-ceremony" class="category-card">
+                    <div class="category-icon japanese">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Tea Ceremonies</h3>
+                    <p>Traditional Japanese tea</p>
+                </a>
+                
+                <a href="experiences.html?category=workshop" class="category-card">
+                    <div class="category-icon workshop">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Workshops</h3>
+                    <p>Art, language, culture</p>
+                </a>
+                
+                <a href="experiences.html?category=food" class="category-card">
+                    <div class="category-icon food">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food Experiences</h3>
+                    <p>Authentic Japanese/Korean</p>
+                </a>
+                
+                <a href="experiences.html" class="category-card">
+                    <div class="category-icon all">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>View All</h3>
+                    <p>100+ experiences</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Experiences -->
+    <section class="featured-experiences" id="featured">
+        <div class="container">
+            <h2>Featured Experiences</h2>
+            <p>Curated cultural activities across India</p>
+            
+            <div class="experience-grid">
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/japan-house-delhi.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                        <span class="group-tag">Group Experience</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(142)</span>
+                        </div>
+                        <h3>Japanese Tea Ceremony Experience</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Japan House, Delhi</p>
+                        <p class="exp-desc">Authentic Japanese tea ceremony conducted by trained tea masters from Kyoto.</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 2 hours</span>
+                            <span><i class="fas fa-users"></i> 8 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=japan-house-delhi" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="experience-card">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/kpop-dance-mumbai.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                        <span class="group-tag">Group Experience</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <h3>K-Pop Random Play Dance</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Danceworx Studio, Mumbai</p>
+                        <p class="exp-desc">Dance to random K-pop songs with other fans. All levels welcome!</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                            <span><i class="fas fa-users"></i> 25 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=kpop-dance-mumbai" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="experience-card">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/anime-art-bangalore.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(67)</span>
+                        </div>
+                        <h3>Anime Character Drawing Workshop</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Strangebrew, Bangalore</p>
+                        <p class="exp-desc">Learn manga drawing techniques from professional artists. Materials included.</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 3 hours</span>
+                            <span><i class="fas fa-users"></i> 12 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=anime-art-bangalore" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Experience 4 -->
+                <div class="experience-card">
+                    <div class="exp-image" style="background-image: url('assets/images/experiences/ramen-making-hyderabad.jpg')">
+                        <span class="price-tag">Price set by host</span>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(124)</span>
+                        </div>
+                        <h3>Authentic Ramen Making Class</h3>
+                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Harima, Hyderabad</p>
+                        <p class="exp-desc">Learn to make authentic Japanese ramen from scratch with chef Hiroshi.</p>
+                        <div class="exp-meta">
+                            <span><i class="fas fa-clock"></i> 2.5 hours</span>
+                            <span><i class="fas fa-users"></i> 6 people</span>
+                        </div>
+                        <a href="experience-detail.html?id=ramen-making-hyderabad" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all">
+                <a href="experiences.html" class="btn outline-btn">View All Experiences</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="cities" id="cities">
+        <div class="container">
+            <h2>Explore By City</h2>
+            <p>Find cultural experiences near you</p>
+            
+            <div class="city-grid">
+                <a href="experiences.html?city=delhi" class="city-card">
+                    <img src="assets/images/cities/delhi.jpg" alt="Delhi">
+                    <div class="city-overlay">
+                        <h3>Delhi</h3>
+                        <p>12 Experiences</p>
+                    </div>
+                </a>
+                
+                <a href="experiences.html?city=mumbai" class="city-card">
+                    <img src="assets/images/cities/mumbai.jpg" alt="Mumbai">
+                    <div class="city-overlay">
+                        <h3>Mumbai</h3>
+                        <p>8 Experiences</p>
+                    </div>
+                </a>
+                
+                <a href="experiences.html?city=bangalore" class="city-card">
+                    <img src="assets/images/cities/bangalore.jpg" alt="Bangalore">
+                    <div class="city-overlay">
+                        <h3>Bangalore</h3>
+                        <p>10 Experiences</p>
+                    </div>
+                </a>
+                
+                <a href="experiences.html?city=hyderabad" class="city-card">
+                    <img src="assets/images/cities/hyderabad.jpg" alt="Hyderabad">
+                    <div class="city-overlay">
+                        <h3>Hyderabad</h3>
+                        <p>7 Experiences</p>
+                    </div>
+                </a>
+                
+                <a href="experiences.html?city=chennai" class="city-card">
+                    <img src="assets/images/cities/chennai.jpg" alt="Chennai">
+                    <div class="city-overlay">
+                        <h3>Chennai</h3>
+                        <p>5 Experiences</p>
+                    </div>
+                </a>
+                
+                <a href="experiences.html?city=kolkata" class="city-card">
+                    <img src="assets/images/cities/kolkata.jpg" alt="Kolkata">
+                    <div class="city-overlay">
+                        <h3>Kolkata</h3>
+                        <p>4 Experiences</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How VibeConnect Works</h2>
+            <p>Join the community in just 3 simple steps</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Browse Experiences</h3>
+                        <p>Find cultural experiences that match your interests in your city</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Book Your Spot</h3>
+                        <p>Reserve your place with secure online payment</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Connect & Enjoy</h3>
+                        <p>Attend the experience and meet like-minded people</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Community Says</h2>
+            <p>Hear from fellow culture enthusiasts</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote">"Finally found a platform that connects me with authentic Japanese cultural experiences in my city!"</p>
+                    <div class="author">
+                        <div class="author-info">
+                            <h4>Culture Enthusiast</h4>
+                            <p>Delhi</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="quote">"The booking process was seamless and the experience exceeded my expectations."</p>
+                    <div class="author">
+                        <div class="author-info">
+                            <h4>K-Pop Fan</h4>
+                            <p>Mumbai</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on New Experiences</h2>
+                <p>Subscribe to our newsletter for the latest events and special offers</p>
+                
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                </form>
+                <div id="newsletter-message" class="newsletter-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo-white.png" alt="VibeConnect" width="40">
+                        <span>VibeConnect</span>
+                    </div>
+                    <p class="footer-about">Connecting culture enthusiasts through authentic Japanese and Korean experiences across India.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/vibeconnect" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="experiences.html">All Experiences</a></li>
+                        <li><a href="experiences.html?category=anime">Anime Events</a></li>
+                        <li><a href="experiences.html?category=kpop">K-Pop Events</a></li>
+                        <li><a href="experiences.html?category=tea-ceremony">Tea Ceremonies</a></li>
+                        <li><a href="experiences.html?category=food">Food Experiences</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Cities</h3>
+                    <ul>
+                        <li><a href="experiences.html?city=delhi">Delhi</a></li>
+                        <li><a href="experiences.html?city=mumbai">Mumbai</a></li>
+                        <li><a href="experiences.html?city=bangalore">Bangalore</a></li>
+                        <li><a href="experiences.html?city=hyderabad">Hyderabad</a></li>
+                        <li><a href="experiences.html?city=chennai">Chennai</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="host.html">Become a Host</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VibeConnect. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/experiences.js"></script>
+    <script src="js/newsletter.js"></script>
+</body>
+</html>

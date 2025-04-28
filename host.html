@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-page="host">
+<head>
+  <!-- Same head as index.html -->
+  <title>Become a Host | VibeConnect</title>
+</head>
+<body>
+  <!-- Reuse navbar -->
+  <nav class="navbar">...</nav>
+
+  <!-- Host Hero -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Become a Host</h1>
+      <p>Share your cultural expertise and earn money</p>
+    </div>
+  </section>
+
+  <!-- Progress Bar -->
+  <section class="host-progress">
+    <div class="step-indicator completed" data-step="1">1</div>
+    <div class="step-indicator" data-step="2">2</div>
+    <div class="step-indicator" data-step="3">3</div>
+    <div class="progress-bar"></div>
+  </section>
+
+  <!-- Multi-step Form -->
+  <section class="host-application">
+    <div class="container">
+      <form id="host-application">
+        <!-- Step 1 -->
+        <div class="form-step active" data-step="1">
+          <h2>Basic Information</h2>
+          <!-- Form fields -->
+          <button type="button" class="next-step btn primary-btn">Continue</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="form-step" data-step="2">
+          <h2>Experience Details</h2>
+          <!-- Form fields -->
+          <button type="button" class="prev-step btn outline-btn">Back</button>
+          <button type="button" class="next-step btn primary-btn">Continue</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step" data-step="3">
+          <h2>Final Details</h2>
+          <!-- Form fields -->
+          <button type="button" class="prev-step btn outline-btn">Back</button>
+          <button type="submit" class="btn primary-btn">Submit Application</button>
+        </div>
+      </form>
+
+      <!-- Success Message (hidden initially) -->
+      <div id="application-success" class="hidden">
+        <h2>Application Submitted!</h2>
+        <p>We'll review your application and contact you within 3 business days.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reuse footer -->
+  <footer class="footer">...</footer>
+
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</body>
+</html>

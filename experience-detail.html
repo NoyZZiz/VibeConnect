@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Tea Ceremony Experience | VibeConnect</title>
+    <meta name="description" content="Book an authentic Japanese tea ceremony experience in Delhi with trained tea masters from Kyoto">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <!-- Same as index.html -->
+    </nav>
+
+    <!-- Experience Detail -->
+    <main class="experience-detail">
+        <div class="container">
+            <div class="experience-header">
+                <h1>Japanese Tea Ceremony Experience</h1>
+                <div class="experience-meta">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span data-review-api="japan-house-delhi" data-type="rating">4.8</span>
+                        <span>(<span data-review-api="japan-house-delhi" data-type="count">142</span> reviews)</span>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Japan House, Delhi</span>
+                        <a href="#map" class="view-map">View on map</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-gallery">
+                <div class="main-image" style="background-image: url('assets/images/experiences/japan-house-delhi.jpg')"></div>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail" style="background-image: url('assets/images/experiences/tea-ceremony-1.jpg')"></div>
+                    <div class="thumbnail" style="background-image: url('assets/images/experiences/tea-ceremony-2.jpg')"></div>
+                    <div class="thumbnail" style="background-image: url('assets/images/experiences/tea-ceremony-3.jpg')"></div>
+                    <div class="thumbnail" style="background-image: url('assets/images/experiences/tea-ceremony-4.jpg')"></div>
+                </div>
+            </div>
+            
+            <div class="experience-content">
+                <div class="experience-description">
+                    <h2>About this experience</h2>
+                    <p>Immerse yourself in the ancient art of Japanese tea ceremony conducted by trained tea masters from Kyoto.</p>
+                    
+                    <h3>What we'll do</h3>
+                    <ul>
+                        <li>Introduction to tea ceremony history and philosophy</li>
+                        <li>Demonstration by certified tea master</li>
+                        <li>Hands-on preparation of matcha tea</li>
+                        <li>Traditional Japanese sweets tasting</li>
+                    </ul>
+                    
+                    <div class="host-section">
+                        <h3>About your host</h3>
+                        <div class="host-profile">
+                            <img src="assets/images/hosts/hiroshi.jpg" alt="Tea Ceremony Master">
+                            <div class="host-info">
+                                <h4>Hiroshi Tanaka</h4>
+                                <p>Certified tea master with 15 years experience. Trained in Kyoto.</p>
+                                <div class="host-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                    <span>(<span data-review-api="host-hiroshi">320</span> reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <h3>Recent reviews</h3>
+                        
+                        <!-- Review Loading Placeholder -->
+                        <div id="reviews-container" data-experience-id="japan-house-delhi">
+                            <div class="review-loading">
+                                <p>Loading authentic reviews from attendees...</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#leave-review" class="view-all-reviews">Leave a review</a>
+                    </div>
+                    
+                    <div class="location-section" id="map">
+                        <h3>Location</h3>
+                        <p>Japan House Delhi, 1st Floor, 50C, Janpath Road, Connaught Place, New Delhi, Delhi 110001</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.715288755064!2d77.21855031508293!3d28.62892398241691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5a8a6a0a7d%3A0x3a8a3b9a0e9b0b1a!2sJapan%20House%20Delhi!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-section">
+                        <h3>Frequently asked questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What should I wear?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Comfortable, modest clothing is recommended. You'll be sitting on tatami mats.</p>
+                            </div>
+                        </div>
+                        <!-- More FAQ items -->
+                    </div>
+                </div>
+                
+                <div class="experience-booking">
+                    <div class="booking-card">
+                        <div class="price-display">
+                            <span>₹<span id="base-price">1200</span>/person</span>
+                            <small class="commission-note">(15% service fee included)</small>
+                        </div>
+                        
+                        <div class="date-picker">
+                            <label for="experience-date">Date</label>
+                            <input type="date" id="experience-date" required>
+                        </div>
+                        
+                        <div class="time-slots">
+                            <h4>Available Times</h4>
+                            <div class="slot-options">
+                                <button class="time-slot active">10:00 AM</button>
+                                <button class="time-slot">1:00 PM</button>
+                                <button class="time-slot">4:00 PM</button>
+                            </div>
+                        </div>
+                        
+                        <div class="participant-selector">
+                            <label>Participants</label>
+                            <div class="counter">
+                                <button id="decrement">−</button>
+                                <input type="number" id="participants-count" value="1" min="1" max="8">
+                                <button id="increment">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="price-summary">
+                            <div class="price-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">₹1200</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Service Fee (15%)</span>
+                                <span id="service-fee">₹180</span>
+                            </div>
+                            <div class="price-row total">
+                                <span>Total</span>
+                                <span id="total-price">₹1380</span>
+                            </div>
+                        </div>
+                        
+                        <button id="book-now" class="primary-btn">Book Now</button>
+                        
+                        <div class="cancellation-policy">
+                            <h5>Cancellation policy</h5>
+                            <p>Full refund if cancelled 48 hours before the experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="similar-experiences">
+                <h2>Similar experiences you might like</h2>
+                <div class="experience-grid">
+                    <!-- Similar experience cards -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Review Form (Hidden until after booking) -->
+    <section id="leave-review" class="review-form-section" style="display:none;">
+        <div class="container">
+            <h2>Share your experience</h2>
+            <form id="review-form">
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="star-rating">
+                        <!-- Star rating input -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your review</label>
+                    <textarea id="review-text" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same as index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+</html>
