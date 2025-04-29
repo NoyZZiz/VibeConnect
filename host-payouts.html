@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-page="host">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Bookings | VibeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <style>
+        .tds-badge {
+            background: #FFF9C4;
+            color: #5D4037;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Same navigation as dashboard -->
+    </nav>
+
+    <main class="host-bookings">
+        <div class="container">
+            <h1>Manage Bookings</h1>
+            
+            <!-- Filters -->
+            <div class="booking-filters">
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select>
+                        <option value="all">All</option>
+                        <option value="upcoming">Upcoming</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Date Range:</label>
+                    <input type="date" id="start-date">
+                    <span>to</span>
+                    <input type="date" id="end-date">
+                </div>
+                <button class="btn outline-btn"><i class="fas fa-filter"></i> Apply</button>
+            </div>
+
+            <!-- Bookings Table -->
+            <div class="bookings-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Date/Time</th>
+                            <th>Experience</th>
+                            <th>Guests</th>
+                            <th>Earnings</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#VC-2041</td>
+                            <td>20 Nov 2023, 10:00 AM</td>
+                            <td>Tea Ceremony</td>
+                            <td>2</td>
+                            <td>₹2,040 <span class="tds-badge">TDS ₹20.40</span></td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>
+                                <button class="btn-icon"><i class="fas fa-envelope"></i></button>
+                                <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#VC-2039</td>
+                            <td>18 Nov 2023, 3:00 PM</td>
+                            <td>K-Pop Dance</td>
+                            <td>1</td>
+                            <td>₹850 <span class="tds-badge">TDS ₹8.50</span></td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>
+                                <button class="btn-icon"><i class="fas fa-star"></i></button>
+                                <button class="btn-icon"><i class="fas fa-receipt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TDS Summary -->
+            <div class="tax-summary">
+                <h3><i class="fas fa-file-invoice"></i> Tax Summary (This Financial Year)</h3>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h4>Total Earnings</h4>
+                        <p>₹42,500</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>TDS Deducted (1%)</h4>
+                        <p>₹425</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>After TDS</h4>
+                        <p>₹42,075</p>
+                    </div>
+                </div>
+                <div class="legal-note">
+                    <i class="fas fa-info-circle"></i> TDS certificates available after 31 March each year.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Same footer as dashboard -->
+    </footer>
+</body>
+</html>

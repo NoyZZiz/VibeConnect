@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="confirmation">
 <head>
-    <!-- Same head content as other pages -->
-    <title>Booking Confirmation | VibeConnect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed | VibeConnect</title>
+    <meta name="description" content="Your booking confirmation for the cultural experience">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
     <!-- Navigation (same as other pages) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="VibeConnect" width="40">
+                <span>VibeConnect</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="host.html">Become a Host</a></li>
+                <li class="global-option" style="display:none"><a href="#global">Global</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Confirmation Main Content -->
     <main class="confirmation">
         <div class="container">
             <div class="confirmation-card">
@@ -17,49 +40,76 @@
                 </div>
                 
                 <div class="confirmation-details">
-                    <h2>Japanese Tea Ceremony Experience</h2>
+                    <h2 id="experience-title">Japanese Tea Ceremony Experience</h2>
+                    
                     <div class="detail-row">
                         <span>Date:</span>
-                        <span id="confirmation-date">November 15, 2023</span>
+                        <span id="confirmation-date">15 November 2023</span>
                     </div>
+                    
                     <div class="detail-row">
                         <span>Time:</span>
                         <span id="confirmation-time">10:00 AM</span>
                     </div>
+                    
                     <div class="detail-row">
                         <span>Participants:</span>
                         <span id="confirmation-participants">2</span>
                     </div>
+                    
                     <div class="detail-row">
                         <span>Location:</span>
-                        <span>Japan House, Delhi</span>
+                        <span id="confirmation-location">Japan House, Delhi</span>
                     </div>
+                    
                     <div class="detail-row total">
                         <span>Total Paid:</span>
                         <span id="confirmation-total">₹2,400</span>
+                    </div>
+                    
+                    <!-- Global Tax Notice (Hidden for India) -->
+                    <div class="global-option" style="display:none">
+                        <div class="detail-row">
+                            <span>Tax:</span>
+                            <span id="confirmation-tax">Included</span>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="confirmation-actions">
                     <a href="index.html" class="btn primary-btn">Back to Home</a>
-                    <a href="#" class="btn outline-btn">Add to Calendar</a>
+                    <a href="#" id="add-to-calendar" class="btn outline-btn">
+                        <i class="far fa-calendar-plus"></i> Add to Calendar
+                    </a>
                 </div>
                 
                 <div class="confirmation-qr">
-                    <img src="assets/images/qr-code.png" alt="Booking QR Code">
+                    <img src="assets/images/qr-code.png" alt="Booking QR Code" id="qr-code">
                     <p>Show this QR code at check-in</p>
                 </div>
                 
                 <div class="confirmation-support">
-                    <p>Need help? Contact our support team at <a href="mailto:support@vibeconnect.com">support@vibeconnect.com</a></p>
+                    <p>Need help? Contact <a href="mailto:support@vibeconnect.com">support@vibeconnect.com</a></p>
+                    <p class="global-option" style="display:none">
+                        <small>Local support: <span id="local-support-number">+1 (555) 123-4567</span></small>
+                    </p>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer (same as other pages) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer content -->
+            </div>
+            <p>&copy; 2023 VibeConnect. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <!-- Scripts -->
     <script src="js/confirmation.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,68 +1,63 @@
-// map.js - Interactive Google Maps implementation
-function initMap() {
-  // Initialize map centered on India
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 5,
-    center: { lat: 20.5937, lng: 78.9629 },
-    styles: [
-      {
-        featureType: "poi",
-        elementType: "labels",
-        stylers: [{ visibility: "off" }]
-      }
-    ]
-  });
+/**
+ * Google Maps Integration
+ */
+class VibeConnectMap {
+  constructor() {
+    this.map;
+    this.markers = [];
+    this.initMap();
+  }
 
-  // Add markers for each location
-  Object.values(locations).forEach(city => {
-    city.forEach(venue => {
-      const marker = new google.maps.Marker({
-        position: venue.coordinates,
-        map: map,
-        title: venue.name,
-        icon: {
-          url: getMarkerIcon(venue.categories[0]),
-          scaledSize: new google.maps.Size(32, 32)
+  initMap() {
+    this.map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 20.5937, lng: 78.9629 }, // India coordinates
+      zoom: 5,
+      styles: [
+        {
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [{ visibility: "off" }]
         }
-      });
-
-      const infoWindow = new google.maps.InfoWindow({
-        content: `
-          <div class="map-info-window">
-            <h3>${venue.name}</h3>
-            <p>${venue.address}</p>
-            ${venue.website ? `<a href="${venue.website}" target="_blank">Website</a>` : ''}
-          </div>
-        `
-      });
-
-      marker.addListener('click', () => {
-        infoWindow.open(map, marker);
-      });
+      ]
     });
-  });
 
-  // Auto-center based on URL parameters
-  const urlParams = new URLSearchParams(window.location.search);
-  const cityParam = urlParams.get('city');
-  
-  if (cityParam && locations[cityParam]) {
-    const bounds = new google.maps.LatLngBounds();
-    locations[cityParam].forEach(venue => {
-      bounds.extend(venue.coordinates);
+    this.loadLocations();
+  }
+
+  loadLocations() {
+    // Replace with your actual locations data
+    const locations = [
+      {
+        name: "Japan House Delhi",
+        position: { lat: 28.6289, lng: 77.2186 },
+        type: "cultural"
+      }
+      // Add more locations...
+    ];
+
+    locations.forEach(location => {
+      const marker = new google.maps.Marker({
+        position: location.position,
+        map: this.map,
+        title: location.name,
+        icon: this.getMarkerIcon(location.type)
+      });
+
+      this.markers.push(marker);
     });
-    map.fitBounds(bounds);
+  }
+
+  getMarkerIcon(type) {
+    const icons = {
+      cultural: 'assets/icons/cultural-marker.png',
+      workshop: 'assets/icons/workshop-marker.png',
+      // Add more types...
+    };
+    return icons[type] || 'assets/icons/default-marker.png';
   }
 }
 
-function getMarkerIcon(category) {
-  const icons = {
-    'anime': 'assets/icons/marker-anime.png',
-    'kpop': 'assets/icons/marker-kpop.png',
-    'tea-ceremony': 'assets/icons/marker-tea.png',
-    'food': 'assets/icons/marker-food.png',
-    'workshop': 'assets/icons/marker-workshop.png',
-    'default': 'assets/icons/marker-default.png'
-  };
-  return icons[category] || icons['default'];
+// Initialize when Map container exists
+if (document.getElementById('map')) {
+  new VibeConnectMap();
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-page="host">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Experience | VibeConnect</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation (Same as dashboard) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="VibeConnect" width="40">
+                <span>VibeConnect</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="host-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="host-experiences.html" class="active"><i class="fas fa-umbrella-beach"></i> Experiences</a></li>
+                <li><a href="host-bookings.html"><i class="fas fa-calendar-check"></i> Bookings</a></li>
+                <li><a href="host-payouts.html"><i class="fas fa-rupee-sign"></i> Payouts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Experience Form -->
+    <main class="host-form">
+        <div class="container">
+            <h1>Create New Experience</h1>
+            
+            <form id="experience-form">
+                <!-- Step 1: Basic Info -->
+                <div class="form-step active" data-step="1">
+                    <h2><i class="fas fa-info-circle"></i> Experience Details</h2>
+                    <div class="form-group">
+                        <label>Title*</label>
+                        <input type="text" placeholder="e.g., Japanese Tea Ceremony" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description*</label>
+                        <textarea placeholder="Describe the cultural activities..." required></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 2: Pricing (Global-Ready) -->
+                <div class="form-step" data-step="2">
+                    <h2><i class="fas fa-rupee-sign"></i> Pricing</h2>
+                    
+                    <!-- Hidden Currency Selector (For Future Use) -->
+                    <div class="form-group" id="currency-field" style="display:none">
+                        <label>Currency*</label>
+                        <select id="price-currency">
+                            <option value="INR" selected>Indian Rupee (₹)</option>
+                            <option value="USD">US Dollar ($)</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Input -->
+                    <div class="form-group">
+                        <label>Set Your Price (₹)*</label>
+                        <input type="number" id="host-price" placeholder="e.g., 1200" min="100" required>
+                        <small>Minimum ₹100 per participant</small>
+                    </div>
+                    
+                    <!-- Pricing Breakdown (India-Focused) -->
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>You Earn:</span>
+                            <span id="host-earnings">₹1,020</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Service Fee (15% + GST):</span>
+                            <span id="service-fee">₹212.40</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Customer Pays:</span>
+                            <span id="customer-price">₹1,232.40</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Scheduling -->
+                <div class="form-step" data-step="3">
+                    <h2><i class="fas fa-calendar-alt"></i> Scheduling</h2>
+                    <div class="form-group">
+                        <label>Duration (hours)*</label>
+                        <input type="number" min="0.5" max="8" step="0.5" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Max Participants*</label>
+                        <input type="number" min="1" max="50" value="8" required>
+                    </div>
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-navigation">
+                    <button type="button" class="btn outline-btn prev-step">Back</button>
+                    <button type="button" class="btn primary-btn next-step">Continue</button>
+                    <button type="submit" class="btn success-btn">Publish Experience</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 VibeConnect. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

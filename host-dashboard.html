@@ -4,27 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Host Dashboard | VibeConnect</title>
-    <meta name="description" content="Manage your cultural experiences and bookings">
-    
-    <!-- Preload CSS/Fonts -->
-    <link rel="preload" href="css/style.css" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="VibeConnect Logo" width="40">
+                <img src="assets/images/logo.png" alt="VibeConnect" width="40">
                 <span>VibeConnect</span>
             </a>
             <ul class="nav-menu">
@@ -32,49 +20,46 @@
                 <li><a href="host-experiences.html"><i class="fas fa-umbrella-beach"></i> Experiences</a></li>
                 <li><a href="host-bookings.html"><i class="fas fa-calendar-check"></i> Bookings</a></li>
                 <li><a href="host-payouts.html"><i class="fas fa-rupee-sign"></i> Payouts</a></li>
-                <li><a href="host-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                <li class="global-option" style="display:none"><a href="host-tax.html"><i class="fas fa-file-invoice"></i> Tax</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Host Dashboard -->
     <main class="host-dashboard">
         <div class="container">
-            <!-- Overview Cards -->
+            <div class="dashboard-header">
+                <h1>Welcome back, <span id="host-name">[Host Name]</span></h1>
+                <div class="global-option" style="display:none">
+                    <select id="country-switcher">
+                        <option value="IN" selected>India</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
             <div class="dashboard-cards">
                 <div class="card">
                     <h3>Upcoming Bookings</h3>
                     <p class="stat">12</p>
-                    <a href="host-bookings.html" class="btn outline-btn">View All</a>
+                    <a href="host-bookings.html" class="btn outline-btn">Manage</a>
                 </div>
                 <div class="card">
-                    <h3>Total Earnings</h3>
-                    <p class="stat">₹24,500</p>
+                    <h3>Available Balance</h3>
+                    <p class="stat">₹8,420</p>
                     <a href="host-payouts.html" class="btn outline-btn">Withdraw</a>
                 </div>
                 <div class="card">
-                    <h3>Active Experiences</h3>
-                    <p class="stat">3</p>
-                    <a href="host-experiences.html" class="btn outline-btn">Manage</a>
+                    <h3>Your Rating</h3>
+                    <p class="stat">4.8 <i class="fas fa-star"></i></p>
+                    <a href="host-reviews.html" class="btn outline-btn">View</a>
                 </div>
             </div>
 
-            <!-- Quick Actions -->
-            <section class="quick-actions">
-                <h2>Quick Actions</h2>
-                <div class="action-buttons">
-                    <a href="host-add-experience.html" class="btn primary-btn">
-                        <i class="fas fa-plus"></i> Add New Experience
-                    </a>
-                    <a href="host-calendar.html" class="btn outline-btn">
-                        <i class="fas fa-calendar-alt"></i> View Calendar
-                    </a>
-                </div>
-            </section>
-
-            <!-- Recent Bookings -->
+            <!-- Recent Bookings Table -->
             <section class="recent-bookings">
-                <h2>Recent Bookings</h2>
+                <h2><i class="fas fa-history"></i> Recent Bookings</h2>
                 <div class="booking-table">
                     <table>
                         <thead>
@@ -83,27 +68,26 @@
                                 <th>Experience</th>
                                 <th>Date</th>
                                 <th>Guests</th>
-                                <th>Amount</th>
+                                <th>Earnings</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Real data would come from backend -->
                             <tr>
-                                <td>#VC-1001</td>
+                                <td>#VC-1024</td>
                                 <td>Japanese Tea Ceremony</td>
                                 <td>15 Nov 2023</td>
                                 <td>2</td>
-                                <td>₹2,400</td>
+                                <td>₹2,040 <span class="tds-badge">TDS 1%</span></td>
                                 <td><span class="status confirmed">Confirmed</span></td>
                             </tr>
                             <tr>
-                                <td>#VC-1002</td>
-                                <td>K-Pop Dance Class</td>
-                                <td>18 Nov 2023</td>
+                                <td>#VC-1023</td>
+                                <td>Anime Drawing Workshop</td>
+                                <td>14 Nov 2023</td>
                                 <td>1</td>
-                                <td>₹800</td>
-                                <td><span class="status pending">Pending</span></td>
+                                <td>₹850 <span class="tds-badge">TDS 1%</span></td>
+                                <td><span class="status completed">Completed</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -112,17 +96,15 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 VibeConnect. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+                <a href="contact.html" class="global-option" style="display:none">Global Support</a>
             </div>
         </div>
     </footer>
-
-    <script src="js/host-dashboard.js"></script>
 </body>
 </html>
